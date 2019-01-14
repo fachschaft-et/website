@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+        <title>Fachschaft-ET</title>
+
+        <!-- Include Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+        <!-- Include Styles -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/mystyle.css">
+
+        <script>
+            $(document).ready(function() {
+                $('#myVideo').play()
+            });
+        </script>
+
+    </head>
+    <body class="page-body">
+        <video autoplay muted loop class="background-video" id="myVideo">
+            <source src="videos/background.mp4" type="video/mp4">
+        </video>
+        <img class="img img-fachschaft" src="images/banner.svg" alt="Fachschaftslogo">
+        <div class="container-fluid page-content">
+            <div class="row m-5">
+                <div class="col-12 p-3">
+                    <div class="info-body">
+                        <h1 class="display-4 m-1 text-center">Moin moin!</h1>
+                        <label class="lead info-label mb-1">Info:</label>
+                        <p class="lead">
+                            Die Fachschaft für Technische Informatik und Elektrotechnik
+                        </p>
+                        <p class="lead">
+                            Bei uns bekommt Ihr alle Skripte und Übungen zu eurem Studium. Ebenfalls stehen die vorderen Räumlichkeiten allen Studenten zur freien Verfügung und dürfen gerne genutzt werden um Gruppenarbeiten zu erledigen oder einfach nur um zu lernen.
+                        </p>
+                        <p class="lead">
+                            Natürlich stehen die Mitglieder euch bei Fragen rum ums Studium immer gerne zur Seite. =)
+                        </p>
+                        <p class="lead">
+                            Raum: ZO6-4/5
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 p-3">
+                    <div class="option-wrapper p-2">
+                        <a class="text-center option" href="/scripts">
+                            <h3 class="display-1">
+                                <span class="fa fa-list-alt option-icon"></span>
+                                <p class="option-title">Jetzt Skripte bestellen</p>
+                            </h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 p-3">
+                    <div class="option-wrapper p-2">
+                        <a class="text-center option" href="/drinks">
+                            <h3 class="display-1">
+                                <span class="fa fa-tv option-icon"></span>
+                                <p class="option-title">Display anzeigen</p>
+                            </h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
