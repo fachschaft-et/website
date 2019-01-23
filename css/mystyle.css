@@ -80,6 +80,22 @@ body {
   min-height: 100%;
 }
 
+.carousel-item {
+    width: 900px;
+    height: 400px;
+}
+
+.carousel-caption {
+    background-color: rgba(240,240,240, 0.8);
+    color: #333;
+    padding: 15px;
+    padding-top: 60px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 100%;
+    border-radius: 4px;
+}
+
 .option-wrapper {
     background-color: rgba(240,240,240, 0.8);
     border-radius: 4px;
