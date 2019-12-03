@@ -43,7 +43,7 @@
                         <p class="lead">
                             Raum: ZO6-4/5
                         </p>
-                        <p class="lead" id="status"></p>
+                        <p class="lead">Status: <span id="status"></span></p>
                     </div>
                 </div>
                 <!--
@@ -83,7 +83,20 @@
         </div>
         <script>
             $.get('/data/sensors', function(data) {
-                document.getElementById('status').innerHTML = 'Status: ' + data;
+                var status = '';
+                var color = '';
+                var element = document.getElementById('status');
+
+                if (data.door_private == 1) {
+                    status = 'offen';
+                    color = 'green';
+                } else {
+                    status = 'geschlossen';
+                    color = 'red';
+                }
+
+                element.innerHTML = 'Fachschaft ' + status;
+                element.style.color = color;
             })
         </script>
     </body>
