@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -15,15 +16,10 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel="stylesheet" href="css/mystyle.css">
 
-        <script>
-            $(document).ready(function() {
-                $('#myVideo').play();
-            });
-        </script>
 
     </head>
     <body class="page-body">
-        <video autoplay muted loop class="background-video" id="myVideo">
+        <video autoplay muted loop class="background-video">
             <source src="videos/background.mp4" type="video/mp4">
         </video>
         <a href="index.html">
@@ -33,7 +29,7 @@
             <div class="row m-5">
                 <div class="col-12 p-3">
                     <div class="info-body">
-                        <h1 class="display-4 m-1 text-center">Moin moin!</h1>
+                        <h1 class="display-4 m-1 text-center">Moin !</h1>
                         <label class="lead info-label mb-1">Info:</label>
                         <p class="lead">
                             Die Fachschaft für Technische Informatik und Elektrotechnik
@@ -47,8 +43,10 @@
                         <p class="lead">
                             Raum: ZO6-4/5
                         </p>
+                        <p class="lead">Status: <span id="status"></span></p>
                     </div>
                 </div>
+                <!--
                 <div class="col-md-6 p-3">
                     <div class="option-wrapper p-2">
                         <a class="text-center option" href="/scripts">
@@ -69,6 +67,7 @@
                         </a>
                     </div>
                 </div>
+                -->
             </div>
         </div>
         <div class="row footer">
@@ -82,5 +81,23 @@
                 <a class="footer-link" href="privacy.html">Datenschutz</a>
             </div>
         </div>
+        <script>
+            $.get('/data/sensors', function(data) {
+                var status = '';
+                var color = '';
+                var element = document.getElementById('status');
+
+                if (data.door_private == 1) {
+                    status = 'offen';
+                    color = 'green';
+                } else {
+                    status = 'geschlossen';
+                    color = 'red';
+                }
+
+                element.innerHTML = 'Fachschaft ' + status;
+                element.style.color = color;
+            })
+        </script>
     </body>
 </html>

@@ -39,14 +39,6 @@ body {
     color: rgba(200,10,20,1) !important;
 }
 
-.page-body {
-    background-image: url('../images/background');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    padding-top: 200px;
-}
-
 .page-content {
     max-width: 1200px;
 }
